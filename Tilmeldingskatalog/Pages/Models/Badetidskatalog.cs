@@ -2,5 +2,6 @@
 {
     public class Badetidskatalog
     {
+        public string Id { get; set; }
     }
 }

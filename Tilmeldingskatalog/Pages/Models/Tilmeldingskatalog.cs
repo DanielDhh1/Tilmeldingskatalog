@@ -9,7 +9,7 @@
         {
             people = new List<Person>();
         }
-        public void AdPerson(Person person)
+        public void AddPerson(Person person)
         {
             people.Add(person);
 

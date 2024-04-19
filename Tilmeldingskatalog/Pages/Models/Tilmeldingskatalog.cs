@@ -14,6 +14,10 @@
             people.Add(person);
 
         }
+        public void RemovePerson(Person person)
+        {
+            people.Remove(person);
+        }
         public void PrintPeople()
         {
             foreach (Person person in people)
@@ -22,7 +26,6 @@
             }
         Console.WriteLine();
         }
-
     }
 }
 

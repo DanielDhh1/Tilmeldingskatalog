@@ -12,7 +12,6 @@
         public void AddPerson(Person person)
         {
             people.Add(person);
-
         }
         public void RemovePerson(Person person)
         {

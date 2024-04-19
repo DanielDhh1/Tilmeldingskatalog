@@ -1,11 +1,11 @@
 ﻿namespace Tilmeldingskatalog.Pages.Models
 {
-    public class Tilmeldingskatalog
+    public class TilmeldingsCatalog
     {       
         List<Person> people;
 
 
-        public Tilmeldingskatalog()
+        public TilmeldingsCatalog()
         {
             people = new List<Person>();
         }

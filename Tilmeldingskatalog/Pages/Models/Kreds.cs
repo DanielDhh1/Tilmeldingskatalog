@@ -21,7 +21,11 @@ namespace Tilmeldingskatalog.Pages.Models
             _adress = adress;
             _total = total;
             _id = id;
-        }  
+        }
+        public override string ToString()
+        {
+            return $"{Id}: {Name} {Adress} {Total}";
+        }
     }
 }
 

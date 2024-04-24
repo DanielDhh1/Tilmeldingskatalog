@@ -1,4 +1,6 @@
-﻿namespace Tilmeldingskatalog.Pages.Models
+﻿using System.Security.Cryptography.X509Certificates;
+
+namespace Tilmeldingskatalog.Pages.Models
 {
     public class TilmeldingsCatalog
     {       
@@ -24,28 +26,14 @@
                 Console.WriteLine($"{person}");
             }
         Console.WriteLine();
-        }
-        public void Tilmeldingschoice()
-        {
-            while (true)
-            {
-                Console.WriteLine("Badetidskatalog");
-                Console.WriteLine("1: Tilmelding");
-                Console.WriteLine("2: Afmelding");
-
-                int choice = GetUserChoice(2);
-                switch(choice)
-                {
-                    case 1:
-                        AddKreds();
-                        break;
-                }
-            }
-
-            
-        }
-    }
+        }       
+    }             
 }
+        
+                
+                
+    
+
 
 
 

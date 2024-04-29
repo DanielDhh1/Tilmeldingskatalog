@@ -1,16 +1,19 @@
 ﻿@page
-@model Tilmeldingskatalog.KredsModel
+@model Tilmeldingskatalog.KredsOversigtModel
 @using Tilmeldingskatalog.Pages.Models
 @{
 
 }
 <h4 style="color:blue">Liste af Kredse</h4>
-
+<form method="get">
 @{
-    foreach(Kreds kreds in Model._kredse)
+    foreach(var kreds in Model._kredse)
     {
+        <div class="Card-m-3" style="min-width:16%; max-width:20%">
         <p>Id: @kreds.Id</p>
         <p>Name: @kreds.Name</p>
         <p>Adress: @kreds.Adress</p>
+        </div>
     }
 }
+</form>

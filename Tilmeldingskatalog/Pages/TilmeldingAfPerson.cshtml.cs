@@ -1,20 +1,26 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using System.Diagnostics;
 using Tilmeldingskatalog.Pages.Models;
 
 namespace Tilmeldingskatalog.Pages
 {
     public class TilmeldingAfPersonModel : PageModel
     {
+        public List<Person> people { get; set; }
+        [BindProperty]
         public Person Person { get; set; }
-        TilmeldingsCatalog tk;
-        public TilmeldingAfPersonModel()
+        TilmeldingsCatalog _tk;
+        public TilmeldingAfPersonModel(TilmeldingsCatalog tk)
         {
-            tk = new TilmeldingsCatalog();
+            _tk = tk;
+            people = _tk.PrintPeople();
         }
-        public void OnGet()
+        public IActionResult OnPost()
         {
-
+            _tk.AddPerson(Person);
+            Debug.WriteLine(Person);
+            return RedirectToPage("TilmeldingAfPerson");
         }
     }
 }

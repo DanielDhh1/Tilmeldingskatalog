@@ -1,3 +1,5 @@
+using Tilmeldingskatalog.Pages.Models;
+
 namespace Tilmeldingskatalog
 {
     public class Program
@@ -8,6 +10,7 @@ namespace Tilmeldingskatalog
 
             // Add services to the container.
             builder.Services.AddRazorPages();
+            builder.Services.AddSingleton<IRepositoryCRUD, TilmeldingsCatalog>();
 
             var app = builder.Build();
 

@@ -6,25 +6,20 @@ using Tilmeldingskatalog.Pages.Models;
 
 namespace Tilmeldingskatalog
 {
-    public class KredsModel : PageModel
+    public class KredsOversigtModel : PageModel
     {
         public List<Kreds> _kredse {  get; set; }
         [BindProperty]
         public Kreds _kreds { get; set; }
         FordelingsKatalog _fk;
-        public KredsModel(FordelingsKatalog fk)
+        public KredsOversigtModel(FordelingsKatalog fk)
         {
             _fk = fk;
             _kredse = _fk.GetKreds();
         }
-        public IActionResult OnGet()
+        public void OnGet()
         {
-            return Page();
-        }
-        public IActionResult OnPost()
-        {
-            _fk.AddKreds(_kreds);
-            return RedirectToPage("Kreds");
+            
         }
     }
 }

@@ -2,7 +2,7 @@
 
 namespace Tilmeldingskatalog.Pages.Models
 {
-    public class TilmeldingsCatalog
+    public class TilmeldingsCatalog : IRepositoryCRUD
     {       
         List<Person> people;
 
@@ -10,6 +10,7 @@ namespace Tilmeldingskatalog.Pages.Models
         public TilmeldingsCatalog()
         {
             people = new List<Person>();
+            people.Add(new Person("Klaus", 25156585, "klauslauersen@hotmail.com", "Yeetskeetstræde 420, Blazeville02", 42));
         }
         public void AddPerson(Person person)
         {
@@ -19,13 +20,9 @@ namespace Tilmeldingskatalog.Pages.Models
         {
             people.Remove(person);
         }
-        public void PrintPeople()
+        public List<Person> PrintPeople()
         {
-            foreach (Person person in people)
-            {
-                Console.WriteLine($"{person}");
-            }
-        Console.WriteLine();
+            return people;
         }       
     }             
 }

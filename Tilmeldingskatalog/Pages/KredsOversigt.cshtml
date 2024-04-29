@@ -1,0 +1,16 @@
+﻿@page
+@model Tilmeldingskatalog.KredsModel
+@using Tilmeldingskatalog.Pages.Models
+@{
+
+}
+<h4 style="color:blue">Liste af Kredse</h4>
+
+@{
+    foreach(Kreds kreds in Model._kredse)
+    {
+        <p>Id: @kreds.Id</p>
+        <p>Name: @kreds.Name</p>
+        <p>Adress: @kreds.Adress</p>
+    }
+}

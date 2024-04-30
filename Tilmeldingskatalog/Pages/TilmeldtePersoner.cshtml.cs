@@ -5,22 +5,25 @@ using Tilmeldingskatalog.Pages.Models;
 
 namespace Tilmeldingskatalog.Pages
 {
-    public class TilmeldingAfPersonModel : PageModel
+    public class TilmeldtePersoner : PageModel
     {
         public List<Person> people { get; set; }
         [BindProperty]
         public Person Person { get; set; }
         TilmeldingsCatalog _tk;
-        public TilmeldingAfPersonModel(TilmeldingsCatalog tk)
+        public TilmeldtePersoner(TilmeldingsCatalog tk)
         {
             _tk = tk;
-            people = _tk.PrintPeople();
+            people = tk.PrintPeople();
+        }
+        public IActionResult OnGet()
+        {
+            return Page();
         }
         public IActionResult OnPost()
         {
             _tk.AddPerson(Person);
-            Debug.WriteLine(Person);
-            return RedirectToPage("TilmeldingAfPerson");
+            return RedirectToPage("TilmeldtePersoner");
         }
     }
 }

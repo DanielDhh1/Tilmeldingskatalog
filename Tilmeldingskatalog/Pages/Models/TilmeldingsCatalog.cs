@@ -2,7 +2,7 @@
 
 namespace Tilmeldingskatalog.Pages.Models
 {
-    public class TilmeldingsCatalog : IRepositoryCRUD
+    public class TilmeldingsCatalog
     {       
         List<Person> people;
 

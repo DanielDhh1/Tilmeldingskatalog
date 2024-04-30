@@ -1,0 +1,20 @@
+﻿@page
+@model Tilmeldingskatalog.Pages.TilmeldtePersoner
+@using Tilmeldingskatalog.Pages.Models
+@{
+
+}
+
+<a class="nav-link text-dark" asp-area="" asp-page="/Tilmelding">Opret person</a>
+        <form method="get">
+    @{
+        foreach(var person in Model.people)
+        {
+            <p>Navn: @person.Name</p>
+            <p>Navn: @person.Phonenumber</p>
+            <p>Navn: @person.Adress</p>
+            <p>Navn: @person.Email</p>
+            <p>Navn: @person.Age</p>
+        }
+    }
+        </form>

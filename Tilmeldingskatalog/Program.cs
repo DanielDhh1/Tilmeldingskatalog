@@ -10,7 +10,7 @@ namespace Tilmeldingskatalog
 
             // Add services to the container.
             builder.Services.AddRazorPages();
-            builder.Services.AddSingleton<IRepositoryCRUD, TilmeldingsCatalog>();
+            builder.Services.AddSingleton<TilmeldingsCatalog>();
 
             var app = builder.Build();
 

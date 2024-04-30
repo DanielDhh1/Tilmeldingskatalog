@@ -1,0 +1,48 @@
+﻿@page
+@model Tilmeldingskatalog.Pages.TilmeldingModel
+@{
+}
+<h4 style="color:blue">Opret ny person</h4>
+<form method="post" class="form-horizontal">
+    <div class="form-group" style="width:25%">
+        <label asp-for="@Model.Person.Name" class="col-sm-2 control-label"></label>
+        <div class="col-sm-10">
+            <input asp-for="@Model.Person.Name" type="text" class="form-control" />
+            <span asp-validation-for="@Model.Person.Name" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="form-group" style="width:25%">
+        <label asp-for="@Model.Person.Phonenumber" class="col-sm-2 control-label"></label>
+        <div class="col-sm-10">
+            <input asp-for="@Model.Person.Phonenumber" type="text" class="form-control" />
+            <span asp-validation-for="@Model.Person.Phonenumber" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="form-group" style="width:25%">
+        <label asp-for="@Model.Person.Adress" class="col-sm-2 control-label"></label>
+        <div class="col-sm-10">
+            <input asp-for="@Model.Person.Adress" type="text" class="form-control" />
+            <span asp-validation-for="@Model.Person.Adress" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="form-group" style="width:25%">
+        <label asp-for="@Model.Person.Email" class="col-sm-2 control-label"></label>
+        <div class="col-sm-10">
+            <input asp-for="@Model.Person.Email" type="text" class="form-control" />
+            <span asp-validation-for="@Model.Person.Email" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="form-group" style="width:25%">
+        <label asp-for="@Model.Person.Age" class="col-sm-2 control-label"></label>
+        <div class="col-sm-10">
+            <input asp-for="@Model.Person.Age" type="text" class="form-control" />
+            <span asp-validation-for="@Model.Person.Age" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label"></label>
+        <div class="col-sm-10">
+            <button type="submit" class="border-light">Tilføj Person</button>
+        </div>
+    </div>
+</form>
